@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center p-3"> Choose the reference image on {{ dataset }} dataset</h1>
+    <div class="w-100">
+        <section >
+            <div class="container">
+                <div class="row no-gutters justify-content-center">
+                    {% for name in names %}
+                        <div class="col-xs-11 col-sm-11 col-md-6 col-lg-4 bg-image hover-zoom mb-3">
+                            <a class="bg-image" href="{{ url_for('relative_caption', dataset=dataset, reference_name=name) }}">
+                                    <img class="img-fluid image" src="{{ url_for('get_image', image_name=name, dim=640) }}"
+                                         alt="Frame overview">
+                                </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock content %}

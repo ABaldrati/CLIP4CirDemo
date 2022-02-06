@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center p-3"> Choose the dataset you want to experience with</h1>
+    <div class="row justify-content-center">
+        <div class="bg-image ripple col-xs-11 col-sm-10 col-md-6 col-lg-6 my-2" data-mdb-ripple-color="light">
+            <img src="{{ url_for('get_image', image_name='dev-303-2-img0', dim=640) }}" style="filter: brightness(50%)" class="w-100"/>
+             <a href="{{ url_for('reference', dataset='cirr') }}">
+                <div class="mask p-0">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <h2 class="text-white mb-0">CIRR Dataset</h2>
+                    </div>
+                </div>
+                <div class="hover-overlay">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="bg-image ripple col-xs-11 col-sm-10 col-md-6 col-lg-6 my-2" data-mdb-ripple-color="light">
+            <img src="{{ url_for('get_image', image_name='B001UFZIJ2', dim=640) }}" style="filter: brightness(50%)" class="w-100"/>
+            <a href="{{ url_for('reference', dataset='fashionIQ') }}">
+                <div class="mask p-0">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <h2 class="text-white mb-0">FashionIQ Dataset</h2>
+                    </div>
+                </div>
+                <div class="hover-overlay">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock content %}

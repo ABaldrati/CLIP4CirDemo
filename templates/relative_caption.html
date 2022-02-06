@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="text-center p-3"> Choose or insert the relative caption</h1>
+    <div class="w-100">
+        <section>
+            <div class="container">
+                <div class="row no-gutters justify-content-around">
+                    <div class="col-xs-11 col-sm-11 col-md-6 col-lg-6 bg-image my-2 text-center">
+                        <h2 class="text-center p-1">Reference Image</h2>
+                        <a class="bg-image">
+                            <img class="img-fluid image"
+                                 src="{{ url_for('get_image', dataset=dataset, image_name=reference_name) }}"
+                                 alt="Frame overview">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-11 col-sm-11 col-md-5 col-lg-5 bg-image text-center align-items-center my-2">
+                        <h2 class="text-center p-1">Dataset captions</h2>
+
+                        <ul class="m-0 p-0">
+                            {% for caption in relative_captions %}
+                                <a class="w-100" href="{{ url_for('results', dataset=dataset, reference_name=reference_name, caption=caption ) }}">
+                                    <h4 style="color: #4f4f4f"
+                                        class="text-center w-100 hover-shadow border text-decoration-none py-1 my-4"> {{ caption }}</h4>
+                                </a>
+                            {% endfor %}
+                            <div class="text-center center-block w-100 border">
+                                <form method="POST">
+                                    <label for="custom_caption"><h4>Try with a custom caption</h4></label>
+                                    <textarea class='form-control' style="font-size: large" id='custom_caption' name='custom_caption' rows="3"
+                                              type="text" placeholder="Insert your caption here"></textarea>
+                                    <input class="m-2" type="submit" value="Submit">
+                                </form>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock content %}

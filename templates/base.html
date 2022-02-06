@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} Conditioned Image Retrieval App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.dark.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="bg-light">
+<nav class="navbar navbar-expand navbar-light pb-0 pt-1" style="background-color: #ef6c00">
+    <a class="navbar-brand hover-shadow-soft justify-content-start mx-3" href="{{ url_for('choice') }}">HOME</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav nav nav-tabs navbar-right">
+            <li class="nav-item mx-1">
+                <a class="nav-link {% if 'cirr' in request.path %}active{% endif %}"
+                   href="{{ url_for('reference', dataset='cirr') }}">CIRR</a>
+            </li>
+            <li class="nav-item mx-1">
+                <a class="nav-link {% if 'fashionIQ' in request.path %}active{% endif %}"
+                   href="{{ url_for('reference', dataset='fashionIQ') }}">FashionIQ</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+</body>
+</html>
