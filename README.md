@@ -62,7 +62,7 @@ git clone https://github.com/ABaldrati/CLIP4CirDemo
 conda create -n clip4cir -y python=3.8
 conda activate clip4cir
 conda install -y -c pytorch pytorch=1.7.1 torchvision=0.8.2
-pip install torchinfo==1.5.2 flask==2.0.2
+pip install flask==2.0.2
 pip install git+https://github.com/openai/CLIP.git
 ```
 3. Download [**FashionIQ**](https://sites.google.com/view/cvcreative2020/fashion-iq)

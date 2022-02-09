@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from data_utils import FashionIQDataset, targetpad_transform, CIRRDataset, data_path
-from utils import get_output_size, collate_fn
+from utils import collate_fn
 
 if torch.cuda.is_available():
     device = torch.device("cuda")
@@ -54,11 +54,11 @@ def extract_and_save_index_features(dataset: Union[CIRRDataset, FashionIQDataset
 
 
 def main():
-    # define clip model and preprocess pipeline, compute input_dim and feature_dim
+    # define clip model and preprocess pipeline, get input_dim and feature_dim
     clip_model, clip_preprocess = clip.load("RN50x4")
     clip_model.eval()
-    input_dim = clip_preprocess.transforms[0].size
-    feature_dim = get_output_size(clip_model.visual, preprocess=clip_preprocess)
+    input_dim = clip_model.visual.input_resolution
+    feature_dim = clip_model.visual.output_dim
     preprocess = targetpad_transform(1.25, input_dim)
 
     # extract and save cirr features
