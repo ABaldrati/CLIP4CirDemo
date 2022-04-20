@@ -19,6 +19,8 @@
 
 ![](images/demo-overview.png "demo-overview")
 
+This is the official repository of the paper **Effective conditioned and composed image retrieval combining CLIP-based features** accepted for the [Demo Track](https://cvpr2022.thecvf.com/call-demos) at [CVPR 2022](https://cvpr2022.thecvf.com)
+
 Conditioned and composed image retrieval extend CBIR systems by combining a query image with an additional text that 
 expresses the intent of the user, describing additional requests w.r.t. the visual content of the query image.
 This type of search is interesting for e-commerce applications, e.g. to develop interactive multimodal searches and chatbots.
@@ -170,6 +172,4 @@ new query
 * [**Tiberio Uricchio**](https://scholar.google.it/citations?user=XHZLRdYAAAAJ&hl=en)
 * [**Alberto Del Bimbo**](https://scholar.google.it/citations?user=bf2ZrFcAAAAJ&hl=en)
 
-## License
 ## Citation
-## Contacts
