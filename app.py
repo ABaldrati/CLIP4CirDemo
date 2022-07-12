@@ -120,10 +120,12 @@ def relative_caption(dataset: str, reference_name: str):
                            relative_captions=relative_captions)
 
 
+@app.route('/<string:dataset>/<string:reference_name>/<string:old_caption>', methods=['POST'])
 @app.route('/<string:dataset>/<string:reference_name>', methods=['POST'])
-def relative_caption_post(dataset: str, reference_name: str):
+def custom_caption(dataset: str, reference_name: str, old_caption: Optional[str] = None):
     """
     Get the custom caption with a POST method and makes the render of 'results' template
+    :param old_caption: caption of the previous query
     :param dataset: dataset of the query
     :param reference_name: reference image name
     """
