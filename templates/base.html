@@ -6,29 +6,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.dark.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
 <nav class="navbar navbar-expand navbar-light pb-0 pt-1" style="background-color: #ef6c00">
-    <a class="navbar-brand hover-shadow-soft justify-content-start mx-3" href="{{ url_for('choice') }}">HOME</a>
+    <a class="navbar-brand hover-shadow-soft justify-content-start mx-3" href="{{ url_for('choice') }}"><b>HOME</b></a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav nav nav-tabs navbar-right">
             <li class="nav-item mx-1">
                 <a class="nav-link {% if 'cirr' in request.path %}active{% endif %}"
-                   href="{{ url_for('reference', dataset='cirr') }}">CIRR</a>
+                   href="{{ url_for('reference', dataset='cirr') }}" style="font-size: medium">CIRR</a>
             </li>
             <li class="nav-item mx-1">
                 <a class="nav-link {% if 'fashionIQ' in request.path %}active{% endif %}"
-                   href="{{ url_for('reference', dataset='fashionIQ') }}">FashionIQ</a>
+                   href="{{ url_for('reference', dataset='fashionIQ') }}" style="font-size: medium">FashionIQ</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<div class="container">
+<div class="container mb-auto">
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
 
@@ -36,5 +37,19 @@
     {% endblock %}
 
 </div>
+
+<footer class="mt-auto mb-2">
+    <hr>
+    <div class="text-center">
+        <a href="https://www.micc.unifi.it/">Media Integration and Communication Center - MICC</a><br>
+        <p>Università degli studi di Firenze, Italy</p>
+        <p>Code and more details available at <a href="https://github.com/ABaldrati/CLIP4CirDemo"> <i
+                class="fa fa-github fa-2x" aria-hidden="true"></i></a></p>
+        <a href="https://scholar.google.it/citations?hl=en&user=I1jaZecAAAAJ">Alberto Baldrati</a>,
+        <a href="https://scholar.google.it/citations?user=SBm9ZpYAAAAJ&hl=en">Marco Bertini</a>,
+        <a href="https://scholar.google.it/citations?user=XHZLRdYAAAAJ&hl=en">Tiberio Uricchio</a>,
+        <a href="https://scholar.google.it/citations?user=bf2ZrFcAAAAJ&hl=en">Alberto Del Bimbo</a>
+    </div>
+</footer>
 </body>
 </html>
