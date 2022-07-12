@@ -19,7 +19,10 @@
 
 ![](images/demo-overview.png "demo-overview")
 
-This is the official repository of the paper **Effective conditioned and composed image retrieval combining CLIP-based features** accepted for the [Demo Track](https://cvpr2022.thecvf.com/call-demos) at [CVPR 2022](https://cvpr2022.thecvf.com)
+This is the official repository of the paper [**Effective conditioned and composed image retrieval combining CLIP-based features**](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf) accepted for the [Demo Track](https://cvpr2022.thecvf.com/call-demos) at [CVPR 2022](https://cvpr2022.thecvf.com).
+
+If you are interested in Conditioned and Composed image retrieval take a look at our follow-up work [**Conditioned and composed image retrieval
+combining and partially fine-tuning CLIP-based features**](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf)
 
 Conditioned and composed image retrieval extend CBIR systems by combining a query image with an additional text that 
 expresses the intent of the user, describing additional requests w.r.t. the visual content of the query image.
@@ -150,17 +153,33 @@ By default, the server run on port 5000 of localhost address: http://127.0.0.1:5
 ## Demo overview
 * Initially choose the dataset you want to experience with. As the image 
 shown by the image you can experience with CIRR dataset or FashionIQ dataset
+
 ![](images/dataset_choice.png "Dataset choice")
 
 * Choose the reference image 
+
 ![](images/reference_choice.png "Reference choice")
 
 * Choose or manually insert the relative caption
+@inproceedings{baldrati2022effective,
+194
+  title={Effective Conditioned and Composed Image Retrieval Combining CLIP-Based Features},
+195
+  author={Baldrati, Alberto and Bertini, Marco and Uricchio, Tiberio and Del Bimbo, Alberto},
+196
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+197
+  pages={21466--21474},
+198
+  year={2022}
+199
+}
 ![](images/relative_caption.png "Caption choice")
 
 * Check out the results. By clicking on a
 retrieved image you can use such image as reference image in a
 new query
+
 ![](images/results.png "Results")
 
 
@@ -173,3 +192,23 @@ new query
 * [**Alberto Del Bimbo**](https://scholar.google.it/citations?user=bf2ZrFcAAAAJ&hl=en)
 
 ## Citation
+If you find this code to be useful for your research, please consider citing this [DEMO paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf)
+<pre>
+@inproceedings{baldrati2022effective,
+  title={Effective Conditioned and Composed Image Retrieval Combining CLIP-Based Features},
+  author={Baldrati, Alberto and Bertini, Marco and Uricchio, Tiberio and Del Bimbo, Alberto},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={21466--21474},
+  year={2022}
+}</pre>
+
+
+If you are interested in Conditioned and Composed image retrieval take a look at our [follow-up work](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf)
+<pre>
+@inproceedings{baldrati2022conditioned,
+  title={Conditioned and Composed Image Retrieval Combining and Partially Fine-Tuning CLIP-Based Features},
+  author={Baldrati, Alberto and Bertini, Marco and Uricchio, Tiberio and Del Bimbo, Alberto},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4959--4968},
+  year={2022}
+}</pre>
