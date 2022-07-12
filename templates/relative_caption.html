@@ -19,7 +19,8 @@
 
                         <ul class="m-0 p-0">
                             {% for caption in relative_captions %}
-                                <a class="w-100" href="{{ url_for('results', dataset=dataset, reference_name=reference_name, caption=caption ) }}">
+                                <a class="w-100"
+                                   href="{{ url_for('results', dataset=dataset, reference_name=reference_name, caption=caption ) }}">
                                     <h4 style="color: #4f4f4f"
                                         class="text-center w-100 hover-shadow border text-decoration-none py-1 my-4"> {{ caption }}</h4>
                                 </a>
@@ -27,7 +28,8 @@
                             <div class="text-center center-block w-100 border">
                                 <form method="POST">
                                     <label for="custom_caption"><h4>Try with a custom caption</h4></label>
-                                    <textarea class='form-control' style="font-size: large" id='custom_caption' name='custom_caption' rows="3"
+                                    <textarea class='form-control' required="required" style="font-size: large"
+                                              id='custom_caption' name='custom_caption' rows="3"
                                               type="text" placeholder="Insert your caption here"></textarea>
                                     <input class="m-2" type="submit" value="Submit">
                                 </form>

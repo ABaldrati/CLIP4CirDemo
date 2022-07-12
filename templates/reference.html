@@ -2,15 +2,22 @@
 {% block content %}
     <h1 class="text-center p-3"> Choose the reference image on {{ dataset }} dataset</h1>
     <div class="w-100">
-        <section >
+        <section>
             <div class="container">
                 <div class="row no-gutters justify-content-center">
+                    <div class="text-center col-12 mb-4">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modal-upload">
+                            <i>Upload image</i>
+                        </button>
+                    </div>
                     {% for name in names %}
                         <div class="col-xs-11 col-sm-11 col-md-6 col-lg-4 bg-image hover-zoom mb-3">
-                            <a class="bg-image" href="{{ url_for('relative_caption', dataset=dataset, reference_name=name) }}">
-                                    <img class="img-fluid image" src="{{ url_for('get_image', image_name=name, dim=640) }}"
-                                         alt="Frame overview">
-                                </a>
+                            <a class="bg-image"
+                               href="{{ url_for('relative_caption', dataset=dataset, reference_name=name) }}">
+                                <img class="img-fluid image" src="{{ url_for('get_image', image_name=name, dim=640) }}"
+                                     alt="Frame overview">
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
@@ -18,4 +25,38 @@
         </section>
     </div>
 
+    <div class="modal fade" id="modal-upload" tabindex="-1" aria-labelledby="modal-upload" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Upload a reference image from your
+                        device</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-upload" enctype="multipart/form-data" method="POST"
+                          action="{{ url_for('file_upload', dataset=dataset) }}">
+                        <div class="form-group">
+                            <label for="file-input">Choose the reference image</label>
+                            <input id="file-input" required="required" class="form-control" type="file" name="file">
+                        </div>
+                        {% if dataset=="fashionIQ" %}
+                            <div class="form-group mt-3">
+                                <label for="fashioniq-category">Fashion category</label>
+                                <select class="form-control" id="fashioniq-category" name="fiq-category">
+                                    <option>dress</option>
+                                    <option>toptee</option>
+                                    <option>shirt</option>
+                                </select>
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="form-upload" class="btn btn-primary">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
