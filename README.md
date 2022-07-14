@@ -1,5 +1,7 @@
 # CLIP4CirDemo
 ### CLIP for Conditioned image retrieval Demo
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/text-image-retrieval-on-fashion-iq?p=effective-conditioned-and-composed-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-cirr)](https://paperswithcode.com/sota/text-image-retrieval-on-cirr?p=effective-conditioned-and-composed-image)
 
 ## Table of Contents
 
@@ -161,19 +163,7 @@ shown by the image you can experience with CIRR dataset or FashionIQ dataset
 ![](images/reference_choice.png "Reference choice")
 
 * Choose or manually insert the relative caption
-@inproceedings{baldrati2022effective,
-194
-  title={Effective Conditioned and Composed Image Retrieval Combining CLIP-Based Features},
-195
-  author={Baldrati, Alberto and Bertini, Marco and Uricchio, Tiberio and Del Bimbo, Alberto},
-196
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-197
-  pages={21466--21474},
-198
-  year={2022}
-199
-}
+
 ![](images/relative_caption.png "Caption choice")
 
 * Check out the results. By clicking on a
