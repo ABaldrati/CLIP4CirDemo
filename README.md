@@ -1,9 +1,17 @@
 # CLIP4CirDemo
 ### CLIP for Conditioned image retrieval Demo
+
+* [**Demo paper**](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf) at [CVPR 2022](https://cvpr2022.thecvf.com)\
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/text-image-retrieval-on-fashion-iq?p=effective-conditioned-and-composed-image)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-cirr)](https://paperswithcode.com/sota/text-image-retrieval-on-cirr?p=effective-conditioned-and-composed-image)
 
+
+* [**Follow-up paper**](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf) presented at [CVPR 2022](https://cvpr2022.thecvf.com) workshop [O-DRUM](https://asu-apg.github.io/odrum/)\
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/conditioned-and-composed-image-retrieval/text-image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/text-image-retrieval-on-fashion-iq?p=conditioned-and-composed-image-retrieval)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/conditioned-and-composed-image-retrieval/text-image-retrieval-on-cirr)](https://paperswithcode.com/sota/text-image-retrieval-on-cirr?p=conditioned-and-composed-image-retrieval)	
+
 ## Table of Contents
+
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
@@ -16,15 +24,16 @@
   * [Run the Demo](#run-the-demo)
 * [Demo Overview](#demo-overview)
 * [Authors](#authors)
+* [Citation](#citation)
 
 ## About The Project
 
 ![](images/demo-overview.png "demo-overview")
 
-This is the official repository of the paper [**Effective conditioned and composed image retrieval combining CLIP-based features**](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf) accepted for the [Demo Track](https://cvpr2022.thecvf.com/call-demos) at [CVPR 2022](https://cvpr2022.thecvf.com).
+This is the **official repository** of the paper [**Effective conditioned and composed image retrieval combining CLIP-based features**](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf) accepted for the [Demo Track](https://cvpr2022.thecvf.com/call-demos) at [CVPR 2022](https://cvpr2022.thecvf.com).
 
 If you are interested in Conditioned and Composed image retrieval take a look at our follow-up work [**Conditioned and composed image retrieval
-combining and partially fine-tuning CLIP-based features**](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf)
+combining and partially fine-tuning CLIP-based features**](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf) accepted at [CVPR 2022](https://cvpr2022.thecvf.com) workshop [O-DRUM](https://asu-apg.github.io/odrum/)
 
 Conditioned and composed image retrieval extend CBIR systems by combining a query image with an additional text that 
 expresses the intent of the user, describing additional requests w.r.t. the visual content of the query image.
