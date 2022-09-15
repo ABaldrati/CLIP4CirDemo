@@ -1,6 +1,11 @@
 # CLIP4CirDemo
 ### CLIP for Conditioned image retrieval Demo
 
+**Live Demo available [here](http://cir.micc.unifi.it:5000/)**
+
+**Training code available at [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/ABaldrati/CLIP4Cir)**
+
+
 * [**Demo paper**](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf) at [CVPR 2022](https://cvpr2022.thecvf.com)\
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/text-image-retrieval-on-fashion-iq?p=effective-conditioned-and-composed-image)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-cirr)](https://paperswithcode.com/sota/text-image-retrieval-on-cirr?p=effective-conditioned-and-composed-image)
