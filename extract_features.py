@@ -3,7 +3,6 @@ from typing import Union
 
 import clip
 import torch
-import torch.nn.functional as F
 from torch import nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -43,7 +42,7 @@ def extract_and_save_index_features(dataset: Union[CIRRDataset, FashionIQDataset
         # extract and concatenate features and names
         with torch.no_grad():
             batch_features = clip_model.encode_image(images)
-            index_features = torch.vstack((index_features, F.normalize(batch_features, dim=-1)))
+            index_features = torch.vstack((index_features, batch_features))
             index_names.extend(names)
 
     # save the extracted features

@@ -6,7 +6,7 @@ import time
 from io import BytesIO
 from multiprocessing import Process
 from typing import Optional, Tuple, Union
-
+import torch.nn.functional as F
 import PIL.Image
 import PIL.ImageOps
 import clip
@@ -246,6 +246,7 @@ def compute_fashionIQ_results(caption: str, combiner: Combiner, n_retrieved: int
         predicted_features = combiner.combine_features(reference_features, text_features).squeeze(0)
 
     # Sort the results and get the top 50
+    index_features = F.normalize(index_features)
     cos_similarity = index_features @ predicted_features.T
     sorted_indices = torch.topk(cos_similarity, n_retrieved, largest=True).indices.cpu()
     sorted_index_names = np.array(index_names)[sorted_indices].flatten()
@@ -294,6 +295,7 @@ def compute_cirr_results(caption: str, combiner: Combiner, n_retrieved: int, ref
         predicted_features = combiner.combine_features(reference_features, text_features).squeeze(0)
 
     # Sort the results and get the top 50
+    index_features = F.normalize(index_features)
     cos_similarity = index_features @ predicted_features.T
     sorted_indices = torch.topk(cos_similarity, n_retrieved, largest=True).indices.cpu()
     sorted_index_names = np.array(index_names)[sorted_indices].flatten()
