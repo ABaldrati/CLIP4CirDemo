@@ -7,13 +7,13 @@
 
 
 * [**Demo paper**](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf) at [CVPR 2022](https://cvpr2022.thecvf.com)\
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/text-image-retrieval-on-fashion-iq?p=effective-conditioned-and-composed-image)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/text-image-retrieval-on-cirr)](https://paperswithcode.com/sota/text-image-retrieval-on-cirr?p=effective-conditioned-and-composed-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/image-retrieval-on-fashion-iq?p=effective-conditioned-and-composed-image)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/effective-conditioned-and-composed-image/image-retrieval-on-cirr)](https://paperswithcode.com/sota/image-retrieval-on-cirr?p=effective-conditioned-and-composed-image)
 
 
 * [**Follow-up paper**](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf) presented at [CVPR 2022](https://cvpr2022.thecvf.com) workshop [O-DRUM](https://asu-apg.github.io/odrum/)\
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/conditioned-and-composed-image-retrieval/text-image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/text-image-retrieval-on-fashion-iq?p=conditioned-and-composed-image-retrieval)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/conditioned-and-composed-image-retrieval/text-image-retrieval-on-cirr)](https://paperswithcode.com/sota/text-image-retrieval-on-cirr?p=conditioned-and-composed-image-retrieval)	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/conditioned-and-composed-image-retrieval/image-retrieval-on-fashion-iq)](https://paperswithcode.com/sota/image-retrieval-on-fashion-iq?p=conditioned-and-composed-image-retrieval)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/conditioned-and-composed-image-retrieval/image-retrieval-on-cirr)](https://paperswithcode.com/sota/image-retrieval-on-cirr?p=conditioned-and-composed-image-retrieval)
 
 ## Table of Contents
 
@@ -197,22 +197,41 @@ new query
 
 ## Citation
 If you find this code to be useful for your research, please consider citing this [DEMO paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Baldrati_Effective_Conditioned_and_Composed_Image_Retrieval_Combining_CLIP-Based_Features_CVPR_2022_paper.pdf)
-<pre>
+```bibtex
 @inproceedings{baldrati2022effective,
   title={Effective Conditioned and Composed Image Retrieval Combining CLIP-Based Features},
   author={Baldrati, Alberto and Bertini, Marco and Uricchio, Tiberio and Del Bimbo, Alberto},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={21466--21474},
   year={2022}
-}</pre>
+}
+```
 
 
-If you are interested in Conditioned and Composed image retrieval take a look at our [follow-up work](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf)
-<pre>
+If you are interested in Conditioned and Composed image retrieval take a look at our follow-up work:
+[**Conditioned and Composed Image Retrieval Combining and Partially Fine-Tuning CLIP-Based Features**](https://openaccess.thecvf.com/content/CVPR2022W/ODRUM/papers/Baldrati_Conditioned_and_Composed_Image_Retrieval_Combining_and_Partially_Fine-Tuning_CLIP-Based_CVPRW_2022_paper.pdf)
+```bibtex
 @inproceedings{baldrati2022conditioned,
   title={Conditioned and Composed Image Retrieval Combining and Partially Fine-Tuning CLIP-Based Features},
   author={Baldrati, Alberto and Bertini, Marco and Uricchio, Tiberio and Del Bimbo, Alberto},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={4959--4968},
   year={2022}
-}</pre>
+}
+```
+
+Take also a look to our most recent work:
+[**Zero-Shot Composed Image Retrieval with Textual Inversion**](https://arxiv.org/abs/2303.15247)
+[![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/miccunifi/SEARLE)
+```bibtex
+@misc{baldrati2023zeroshot,
+      title={Zero-Shot Composed Image Retrieval with Textual Inversion}, 
+      author={Alberto Baldrati and Lorenzo Agnolucci and Marco Bertini and Alberto Del Bimbo},
+      year={2023},
+      eprint={2303.15247},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+
